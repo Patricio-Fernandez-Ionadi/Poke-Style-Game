@@ -1,0 +1,59 @@
+* {
+	font-family: "Press Start 2P", cursive;
+}
+body {
+	background-color: #09f;
+}
+h1 {
+	margin: 0;
+	font-size: 16px;
+}
+button {
+	border: 0;
+	cursor: pointer;
+	font-size: 16px;
+}
+button:hover {
+	background-color: #ddd;
+}
+
+.containerDiv {
+	display: inline-block;
+	position: relative;
+}
+
+#overlappingDiv {
+	background-color: black;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 0;
+	pointer-events: none;
+}
+
+/* BATTLE INTERFACE */
+.battleUI {
+	background-color: white;
+	height: 140px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border-top: 4px #000 solid;
+	display: flex;
+}
+
+.battleUI .abilities {
+	width: 66.66%;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+.battleUI .attackType {
+	width: 33.33%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-left: 4px solid #000;
+}
