@@ -8,7 +8,7 @@ import {
 	playerLeftImage,
 	playerRightImage,
 	playerUpImage,
-} from "../Images/images.js";
+} from "../img/images.js";
 import { Sprite } from "../clases/clases.js";
 import { canvas } from "./canvas.js";
 import { playerSprite, world } from "../utils/constants.js";
@@ -64,6 +64,7 @@ export const draggle = new Sprite({
 		hold: 30,
 	},
 	animate: true,
+	isEnemy: true,
 });
 
 export const emby = new Sprite({
