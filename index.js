@@ -25,6 +25,7 @@ import {
 	movablesMoveRight,
 	movablesMoveUp,
 } from "./utils/movables/movables.js";
+import { attacks } from "./data/attaks.js";
 
 const battle = {
 	initiated: false,
@@ -169,15 +170,29 @@ function animate() {
 	// DETENER JUAGDOR
 	stopPlayerOverLimits();
 }
+
+const renderedSprites = [draggle, emby];
 function animateBattle() {
 	window.requestAnimationFrame(animateBattle);
-
 	battleBackground.draw();
 
-	draggle.draw();
-	emby.draw();
+	renderedSprites.forEach((sprite) => {
+		sprite.draw();
+	});
 }
 
 // Loop Calls
-animate();
-// animateBattle();
+// animate();
+animateBattle();
+
+// event listenner buttons (battle)
+document.querySelectorAll("button").forEach((button) => {
+	button.addEventListener("click", (e) => {
+		const selectedAttack = attacks[e.currentTarget.innerHTML];
+		emby.attack({
+			attack: selectedAttack,
+			recipient: draggle,
+			renderedSprites,
+		});
+	});
+});
