@@ -57,3 +57,37 @@ button:hover {
 	justify-content: center;
 	border-left: 4px solid #000;
 }
+
+.stats {
+	background-color: white;
+	width: 250px;
+	position: absolute;
+	border: 4px solid #000;
+	border-radius: 8px;
+	padding: 12px;
+}
+.stats.enemy {
+	top: 50px;
+	left: 50px;
+}
+.stats.us {
+	top: 330px;
+	right: 50px;
+}
+
+.stats .healhContainer {
+	position: relative;
+}
+.stats .healhContainer .healthBarBackground {
+	height: 5px;
+	background-color: #ccc;
+	margin-top: 10px;
+}
+.stats .healhContainer .healthBar {
+	height: 5px;
+	background-color: green;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
