@@ -23,3 +23,6 @@ draggleImage.src = "./img/draggleSprite.png";
 
 export const embyImage = new Image();
 embyImage.src = "./img/embySprite.png";
+
+// export const fireballImage = new Image();
+// fireballImage.src = "./img/fireball.png";
